@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { WorkshopContext } from "../context/WorkshopContext.jsx";
 import { Link } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { ThemeContext } from "../context/ThemeContext";
 import ErrorBoundary from "../components/ErrorBoundary";

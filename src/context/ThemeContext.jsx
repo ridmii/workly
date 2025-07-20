@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 
+/* eslint-disable react-refresh/only-export-components */
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {

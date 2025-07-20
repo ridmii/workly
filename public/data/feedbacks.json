@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "workshopId": 1,
+    "text": "Great session, learned a lot!",
+    "rating": 4,
+    "user": "John Doe",
+    "date": "July 15, 2025"
+  },
+  {
+    "id": 2,
+    "workshopId": 1,
+    "text": "Very informative, thanks!",
+    "rating": 5,
+    "user": "Jane Smith",
+    "date": "July 16, 2025"
+  },
+  {
+    "id": 3,
+    "workshopId": 1,
+    "text": "Enjoyed the content!",
+    "rating": 3,
+    "user": "CurrentUser",
+    "date": "July 18, 2025"
+  },
+  {
+    "id": 4,
+    "workshopId": 2,
+    "text": "Loved the design techniques shared.",
+    "rating": 4,
+    "user": "Sarah Lee",
+    "date": "July 20, 2025"
+  },
+  {
+    "id": 5,
+    "workshopId": 2,
+    "text": "Well-organized and clear.",
+    "rating": 5,
+    "user": "Tharindu Fernando",
+    "date": "July 21, 2025"
+  },
+  {
+    "id": 6,
+    "workshopId": 3,
+    "text": "Good overview but needed more depth.",
+    "rating": 3,
+    "user": "Ishara Jayasuriya",
+    "date": "July 10, 2025"
+  },
+  {
+    "id": 7,
+    "workshopId": 4,
+    "text": "Fantastic speaker and examples.",
+    "rating": 5,
+    "user": "Amaya Senanayake",
+    "date": "July 11, 2025"
+  },
+  {
+    "id": 8,
+    "workshopId": 4,
+    "text": "Too fast-paced at times.",
+    "rating": 3,
+    "user": "Sahan Perera",
+    "date": "July 12, 2025"
+  },
+  {
+    "id": 9,
+    "workshopId": 5,
+    "text": "Helped me understand key marketing concepts.",
+    "rating": 4,
+    "user": "Nimesha Rajapaksha",
+    "date": "July 14, 2025"
+  },
+  {
+    "id": 10,
+    "workshopId": 6,
+    "text": "Excellent leadership exercises.",
+    "rating": 5,
+    "user": "Hasini Fernando",
+    "date": "July 17, 2025"
+  },
+  {
+    "id": 11,
+    "workshopId": 7,
+    "text": "Interesting but quite basic.",
+    "rating": 3,
+    "user": "Michael Dias",
+    "date": "July 13, 2025"
+  },
+  {
+    "id": 12,
+    "workshopId": 8,
+    "text": "Very detailed and engaging.",
+    "rating": 5,
+    "user": "Kavindu Silva",
+    "date": "July 19, 2025"
+  },
+  {
+    "id": 13,
+    "workshopId": 8,
+    "text": "Loved the case studies!",
+    "rating": 4,
+    "user": "Rashmi Weerasinghe",
+    "date": "July 20, 2025"
+  },
+  {
+    "id": 14,
+    "workshopId": 9,
+    "text": "Could be improved with more real-life examples.",
+    "rating": 3,
+    "user": "Sajith Karunaratne",
+    "date": "July 11, 2025"
+  },
+  {
+    "id": 15,
+    "workshopId": 10,
+    "text": "Good intro to coding basics.",
+    "rating": 4,
+    "user": "Isuru Jayawardena",
+    "date": "July 10, 2025"
+  },
+  {
+    "id": 16,
+    "workshopId": 11,
+    "text": "Eye-opening strategies shared.",
+    "rating": 5,
+    "user": "Shehani de Silva",
+    "date": "July 16, 2025"
+  },
+  {
+    "id": 17,
+    "workshopId": 12,
+    "text": "Photography tips were clear and fun.",
+    "rating": 4,
+    "user": "Chamari Ekanayake",
+    "date": "July 18, 2025"
+  },
+  {
+    "id": 18,
+    "workshopId": 13,
+    "text": "A bit rushed, but still helpful.",
+    "rating": 3,
+    "user": "Ruwan Dissanayake",
+    "date": "July 15, 2025"
+  },
+  {
+    "id": 19,
+    "workshopId": 14,
+    "text": "Useful for financial planning basics.",
+    "rating": 4,
+    "user": "Kaveesha Madushanka",
+    "date": "July 17, 2025"
+  },
+  {
+    "id": 20,
+    "workshopId": 15,
+    "text": "Motivating and impactful session.",
+    "rating": 5,
+    "user": "Janith Samarasinghe",
+    "date": "July 20, 2025"
+  },
+  {
+    "id": 21,
+    "workshopId": 16,
+    "text": "Loved the focus on personal growth!",
+    "rating": 5,
+    "user": "Dilani Pathirana",
+    "date": "July 19, 2025"
+  }
+]

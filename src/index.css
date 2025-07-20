@@ -52,6 +52,6 @@ textarea.light {
   @apply bg-[#338d86] text-white py-2 px-4 rounded hover:bg-[#00C4B4]/80;
 }
 
-.btn.light {
+/*.btn.light {
    @apply bg-[#338d86] text-white py-2 px-4 rounded hover:bg-[#6b8a82]/80;
-}
+}*/

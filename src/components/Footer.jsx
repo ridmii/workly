@@ -1,9 +1,11 @@
 import { motion as Motion } from "framer-motion";
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
   const { theme } = useContext(ThemeContext);
+  const navigate = useNavigate();
 
   return (
     <Motion.footer
@@ -21,14 +23,25 @@ function Footer() {
               theme === "light" ? "text-gray-900" : "text-white"
             }`}
           >
-            Workly
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/");
+              }}
+              className={`text-2xl hover: ${
+                theme === "light" ? "hover:text-gray-900" : "hover:text-gray-200"
+              }`}
+            >
+              Workly
+            </a>
           </h4>
           <p
             className={`text-sm ${
               theme === "light" ? "text-gray-600" : "text-gray-400"
             }`}
           >
-           Find your next skill
+            Find your next skill
           </p>
         </div>
 
@@ -54,24 +67,15 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="dashboard"
                   className={`hover:${
                     theme === "light" ? "text-gray-900" : "text-gray-200"
                   }`}
                 >
-                  Categories
+                  Dashboard
                 </a>
               </li>
-              <li>
-                <a
-                  href="#"
-                  className={`hover:${
-                    theme === "light" ? "text-gray-900" : "text-gray-200"
-                  }`}
-                >
-                  Popular
-                </a>
-              </li>
+
             </ul>
           </div>
 

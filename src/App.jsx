@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import { ThemeProvider } from "./context/ThemeContext";
 import { WorkshopProvider } from "./context/WorkshopContext";
 import ErrorBoundary from "./components/ErrorBoundary";
-import Footer from "./components/Footer"; 
+import Footer from "./components/Footer";
 
 function App() {
   return (

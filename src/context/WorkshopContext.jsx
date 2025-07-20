@@ -10,22 +10,24 @@ export const WorkshopProvider = ({ children }) => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("/data/workshops.json")
-      .then((response) => {
-        if (!response.ok) throw new Error("Network response was not ok");
-        return response.json();
-      })
-      .then((data) => {
-        // Handle raw array directly since workshops.json is [{}]
-        const workshopList = Array.isArray(data) ? data : [];
-        setWorkshops(workshopList);
-        console.log("Workshops loaded:", workshopList);
+    Promise.all([
+      fetch("/data/workshops.json").then((res) => res.json()),
+      fetch("/data/feedbacks.json").then((res) => res.json())
+    ])
+      .then(([workshopData, feedbackData]) => {
+        setWorkshops(Array.isArray(workshopData) ? workshopData : []);
+        setUser((prev) => ({
+          ...prev,
+          feedback: Array.isArray(feedbackData) ? feedbackData : [],
+        }));
+        console.log("Workshops and feedback loaded:", { workshops: workshopData, feedback: feedbackData });
         setError(null);
       })
       .catch((error) => {
-        console.error("Error loading workshops:", error);
-        setError("Failed to load workshops. Please try again later.");
+        console.error("Error loading data:", error);
+        setError("Failed to load data. Please try again later.");
         setWorkshops([]);
+        setUser((prev) => ({ ...prev, feedback: [] }));
       })
       .finally(() => setLoading(false));
   }, []);
@@ -53,8 +55,15 @@ export const WorkshopProvider = ({ children }) => {
     }));
   };
 
+  const deleteFeedback = (feedbackId) => {
+    setUser((prev) => ({
+      ...prev,
+      feedback: prev.feedback.filter((f) => f.id !== feedbackId),
+    }));
+  };
+
   return (
-    <WorkshopContext.Provider value={{ workshops, user, loading, error, registerWorkshop, unregisterWorkshop, addFeedback }}>
+    <WorkshopContext.Provider value={{ workshops, user, loading, error, registerWorkshop, unregisterWorkshop, addFeedback, deleteFeedback }}>
       {children}
     </WorkshopContext.Provider>
   );

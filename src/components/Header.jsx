@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import { NavLink, useNavigate } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
@@ -7,10 +9,9 @@ import { ThemeContext } from "../context/ThemeContext";
 import { WorkshopContext } from "../context/WorkshopContext.jsx";
 
 function Header() {
-  const { user } = useContext(WorkshopContext) || {}; // Provide fallback to avoid error
-  const { theme, toggleTheme } = useContext(ThemeContext) || {}; // Get theme and toggleTheme from ThemeContext
-  console.log(user); // Safe to log now
-
+  const { user } = useContext(WorkshopContext) || {}; 
+  const { theme, toggleTheme } = useContext(ThemeContext) || {}; 
+  console.log(user); 
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -39,13 +40,6 @@ function Header() {
           >
             My Dashboard
           </NavLink>
-          {user ? (
-            <span className={theme === "light" ? "text-gray-600" : "text-gray-300"}>Welcome, {user.name}</span>
-          ) : (
-            <NavLink to="/login" className={theme === "light" ? "text-gray-600 hover:text-[#00C4B4]" : "text-gray-300 hover:text-[#00C4B4]"}>
-              Login
-            </NavLink>
-          )}
           <button
             onClick={toggleTheme}
             className="p-2 rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300 focus:outline-none"
