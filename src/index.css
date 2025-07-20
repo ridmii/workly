@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1A2526;
+  color: #FFFFFF;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light {
+  background-color: #F7FAFC;
+  color: #2D3748;
+}
+
+button {
+  @apply transition duration-200 ease-in-out;
+}
+
+input,
+select,
+textarea {
+  @apply border border-gray-700 rounded-lg p-2 bg-[#3A4449] text-white focus:outline-none focus:ring-2 focus:ring-[#00C4B4];
+}
+
+input.light,
+select.light,
+textarea.light {
+  @apply bg-white text-green-900 border-gray-300 focus:ring-[#3e5d5a];
+}
+
+.card {
+  @apply bg-[#2A3439] rounded-lg p-4 shadow-lg;
+}
+
+.card.light {
+  @apply bg-white;
+}
+
+.tag {
+  @apply px-3 py-1 rounded-full text-sm bg-[#81aca1] text-white;
+}
+
+.tag.light {
+  @apply px-3 py-1 rounded-full text-sm bg-[#444a49] text-white;
+}
+
+.btn {
+  @apply bg-[#338d86] text-white py-2 px-4 rounded hover:bg-[#00C4B4]/80;
+}
+
+.btn.light {
+   @apply bg-[#338d86] text-white py-2 px-4 rounded hover:bg-[#6b8a82]/80;
+}

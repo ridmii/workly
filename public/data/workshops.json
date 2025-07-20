@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "title": "Modern Web Development with React",
+    "description": "Explore best practices in building scalable React applications with modern tools and workflows.",
+    "date": "2024-08-12",
+    "location": "Colombo",
+    "category": "Technology",
+    "tags": ["React", "JavaScript"],
+    "organizers": ["Isuru Perera", "Malsha Weerakoon"],
+    "image": "/assets/react.jpg"
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Design for Beginners",
+    "description": "Get started with user experience and interface design with hands-on exercises.",
+    "date": "2024-08-15",
+    "location": "Kandy",
+    "category": "Design",
+    "tags": ["Design", "UI/UX"],
+    "organizers": ["Nimali Fernando", "Kavisha Ranawaka"],
+    "image": "/assets/ui.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Machine Learning with Python",
+    "description": "Learn core machine learning algorithms and how to implement them with Python.",
+    "date": "2024-08-20",
+    "location": "Online",
+    "category": "Technology",
+    "tags": ["AI", "Python"],
+    "organizers": ["Thilina Jayawardena", "Hasini De Silva"],
+    "image": "/assets/ds.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Digital Illustration Basics",
+    "description": "An introduction to digital art tools and techniques for aspiring illustrators.",
+    "date": "2024-08-25",
+    "location": "Galle",
+    "category": "Art",
+    "tags": ["Design", "Art"],
+    "organizers": ["Sajini Karunaratne", "Janith Rajapaksha"],
+    "image": "/assets/dm.jpg"
+  },
+  {
+    "id": 5,
+    "title": "SEO Strategies for 2025",
+    "description": "Stay ahead with search engine optimization techniques for modern websites.",
+    "date": "2024-08-27",
+    "location": "Online",
+    "category": "Marketing",
+    "tags": ["SEO", "Marketing"],
+    "organizers": ["Chamika Silva", "Nirosha Senanayake"],
+    "image": "/assets/leader.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Photography and Storytelling",
+    "description": "Learn how to use photography to tell compelling stories.",
+    "date": "2024-09-01",
+    "location": "Matara",
+    "category": "Creative",
+    "tags": ["Photography", "Creativity"],
+    "organizers": ["Ruwani Dias", "Sameera Hettiarachchi"],
+    "image": "/assets/remote.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Getting Started with Git and GitHub",
+    "description": "Master version control and collaboration with Git and GitHub.",
+    "date": "2024-09-03",
+    "location": "Jaffna",
+    "category": "Technology",
+    "tags": ["Git", "Collaboration"],
+    "organizers": ["Anuradha Gamage", "Deshani Gunarathne"],
+    "image": "/assets/app.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Design Thinking Bootcamp",
+    "description": "Innovate and solve problems with a user-centered mindset.",
+    "date": "2024-09-05",
+    "location": "Colombo",
+    "category": "Design",
+    "tags": ["Innovation", "Design"],
+    "organizers": ["Dilshan Weerasinghe", "Minuri Peiris"],
+    "image": "/assets/camp.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Leadership Skills for Women in Tech",
+    "description": "Empowering women to lead with confidence in the tech industry.",
+    "date": "2024-09-07",
+    "location": "Online",
+    "category": "Personal Development",
+    "tags": ["Leadership", "Diversity"],
+    "organizers": ["Harshini Alwis", "Inoka Dissanayake"],
+    "image": "/assets/tech.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Intro to Cybersecurity",
+    "description": "Understand the basics of cybersecurity and how to protect digital assets.",
+    "date": "2024-09-10",
+    "location": "Kurunegala",
+    "category": "Technology",
+    "tags": ["Cybersecurity", "Tech"],
+    "organizers": ["Kasun Fernando", "Ramesh Dissanayake"],
+    "image": "/assets/cyber.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Cloud Computing Essentials",
+    "description": "Learn how cloud services like AWS and Azure are reshaping the tech industry.",
+    "date": "2024-09-12",
+    "location": "Colombo",
+    "category": "Technology",
+    "tags": ["Cloud", "DevOps"],
+    "organizers": ["Sajeev Ranasinghe", "Taniya Wickramasinghe"],
+    "image": "/assets/cloud.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Financial Literacy for Freelancers",
+    "description": "Manage your income, expenses, and taxes as a creative freelancer.",
+    "date": "2024-09-14",
+    "location": "Online",
+    "category": "Business",
+    "tags": ["Finance", "Freelance"],
+    "organizers": ["Iresha De Silva", "Sahan Pathirana"],
+    "image": "/assets/freelance.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Responsive Web Design",
+    "description": "Design websites that look great on all devices with modern CSS techniques.",
+    "date": "2024-09-16",
+    "location": "Kandy",
+    "category": "Design",
+    "tags": ["HTML", "CSS", "Web Design"],
+    "organizers": ["Nadeesha Pathirana", "Mihira Aluthge"],
+    "image": "/assets/design.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Intro to Blockchain",
+    "description": "Understand the fundamentals of blockchain and its real-world applications.",
+    "date": "2024-09-18",
+    "location": "Online",
+    "category": "Technology",
+    "tags": ["Blockchain", "Crypto"],
+    "organizers": ["Dinuka Samarasinghe", "Bhagya Herath"],
+    "image": "/assets/blockchain.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Stress Management for Developers",
+    "description": "Learn techniques to stay productive and stress-free while coding.",
+    "date": "2024-09-20",
+    "location": "Online",
+    "category": "Personal Development",
+    "tags": ["Mental Health", "Wellness"],
+    "organizers": ["Shehani Perera", "Anjana Jayasuriya"],
+    "image": "/assets/stress.jpg"
+  },
+  {
+    "id": 16,
+    "title": "Career Planning for Graduates",
+    "description": "Prepare for the tech job market with resume tips, interview practice, and networking.",
+    "date": "2024-09-23",
+    "location": "Colombo",
+    "category": "Career",
+    "tags": ["Career", "Job Search"],
+    "organizers": ["Kavindu Jayasena", "Yamuna Rathnayake"],
+    "image": "/assets/career.jpg"
+  }
+]
