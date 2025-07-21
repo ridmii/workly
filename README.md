@@ -2,7 +2,7 @@
 
 Welcome to Workly, a frontend-only web application designed for managing workshops and user feedback. This project provides a responsive, theme-switchable interface where users can register for workshops, submit feedback with ratings, and view their personalized dashboard. Built as a standalone client-side application, it relies on static data and does not include a backend or persistent storage—data resets on page refresh.
 
-## Features
+## 🚀 Features
 - **Workshop Registration**: Register and unregister for workshops using a simple interface.
 - **Feedback System**: Submit feedback with 1-5 star ratings and comments for attended workshops.
 - **Personalized Dashboard**: View registered workshops and submitted feedback, filtered to the current user.
@@ -10,12 +10,12 @@ Welcome to Workly, a frontend-only web application designed for managing worksho
 - **Animations**: Smooth transitions and effects with Framer Motion.
 - **Responsive Design**: Optimized for desktop and mobile views with Tailwind CSS.
 
-## Prerequisites
+## 🛠 Prerequisites
 - **Node.js**: Version 14.x or later (download from [nodejs.org](https://nodejs.org/))
 - **npm**: Included with Node.js
 - **Web Browser**: A modern browser like Chrome, Firefox, or Edge
 
-## Installation
+## 📦 Installation
 
 1. **Clone the Repository**:
    ```bash
@@ -53,7 +53,7 @@ Welcome to Workly, a frontend-only web application designed for managing worksho
      ```
      **Open http://localhost:5173 in your browser to view the app**. Navigate to the Home page to start exploring workshops.
 
-  ## Usage
+  ## 🧭 Usage
  
   - Home Page: Visit the root URL (/) to browse available workshops and navigate to their details.
   - Workshop Details Page: Click a workshop from the Home page to register, unregister, or leave feedback with a rating (1-5 stars) and comment. 
@@ -61,7 +61,7 @@ Welcome to Workly, a frontend-only web application designed for managing worksho
   - Theme Switching: Toggle themes via the ThemeContext (implementation assumed to be in place—reviewers can inspect src/context/ThemeContext.jsx).
   - Data Behavior: Feedback and registrations are lost on page refresh since this is a frontend-only app with no persistence.
 
-  ## Project Structure
+  ## 📁 Project Structure
   ```bash
     workly-workshop/
 ├── public/                # Static files
@@ -82,35 +82,37 @@ Welcome to Workly, a frontend-only web application designed for managing worksho
 
   ```
 
-## Technologies Used
+## 🧰 Technologies Used
 - React: For building the dynamic user interface.
 - React Router: For client-side navigation.
 - Tailwind CSS: For utility-first styling and responsive design.
 - Framer Motion: For animations and transitions.
 - Vite: For fast development and bundling.
 
-## Limitations 
+## ⚠️ Limitations 
 - Frontend-Only: No backend or API integration; data is static or transient.
 - No Persistence: Feedback and registrations reset on page refresh.
 - Mock User: Uses a hardcoded "User" with email "user@example.com".
 - Static Data: Relies on workshops.json for workshop data; no dynamic updates.
 
-## Contributing
+## 🤝 Contributing
 This project was created as part of my internship selection process and is intended as a personal portfolio piece for evaluation. As such, it is not currently open for external contributions. However, I welcome feedback from reviewers! Please open an issue on the [GitHub repository](https://github.com/ridmii/workly/issues) with suggestions, questions, or comments to help me improve. Thank you for reviewing my work!
 
-## License
+## 📜 License
 This project is licensed under the MIT License. Feel free to use, modify, and distribute it as per the license terms. (Add a LICENSE file if not already present.)
 
-## Acknowledgments
+## 🙏 Acknowledgments
 - Grateful to the open-source communities of React, Tailwind CSS, and Framer Motion for their tools.
 - Thanks to Vercel for providing a seamless deployment platform.
 
-## Contact
-For questions or feedback, please open an issue on the [GitHub repository](https://github.com/ridmii/workly/issues) or contact me at heyridmi@gmail.com.
+## 📬 Contact
+For questions, feedback, or review related inquiries:
+📧 heyridmi@gmail.com
+💬 Or open an issue at [GitHub repository](https://github.com/ridmii/workly/issues)
 
-## Review Notes for GitHub Reviewers
+## 📝 Review Notes for GitHub Reviewers
 - Scope: This is a frontend-only demo showcasing React, context management, and styling, with a deployed version on Vercel. It’s designed for learning and portfolio purposes as part of my internship selection process, featuring a Home page.
-- Testing: Start at the deployed URL (e.g., https://workly.vercel.app/) or locally at http://localhost:5173. Ensure public/data/workshops.json and public/assets/ images are present. Test navigation to /dashboard and /workshop/1.
+- Testing: Start at the deployed URL (e.g., https://workly-ten.vercel.app/) or locally at http://localhost:5173. Ensure public/data/workshops.json and public/assets/ images are present. Test navigation to /dashboard and /workshop/1.
 - Code Quality: Review src/pages/Home.jsx for the workshop listing, src/pages/Dashboard.jsx for feedback logic, and src/context/WorkshopContext.jsx for data management. Check vercel.json for routing configuration.
 - Improvements: Suggestions for adding persistence (e.g., localStorage), a backend integration, or enhancing the Home page UI are welcome!
 
