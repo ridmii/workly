@@ -63,7 +63,7 @@ Welcome to Workly, a frontend-only web application designed for managing worksho
 
   ## 📁 Project Structure
   ```bash
-    workly-workshop/
+    workshop-app/
 ├── public/                # Static files
 │   ├── assets/            # Images used in the app (e.g., leadership.jpg)
 │   └── data/              # JSON data files
