@@ -64,22 +64,26 @@ function WorkshopDetails() {
 
   const workshopFeedback = user?.feedback.filter((f) => f.workshopId === parseInt(id)) || [];
 
-  if (!workshop) return <div className="container mx-auto p-6 text-center">Workshop not found</div>;
+  if (!workshop) return <div className="container mx-auto p-4 text-center">Workshop not found</div>;
 
   return (
-    <div className="container mx-auto p-6 mt-24">
+    <div className="container mx-auto p-4 sm:p-6 mt-16 sm:mt-24">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className={`card ${theme === "light" ? "light bg-white text-gray-900" : "bg-[#2A3439] text-white"} p-6 rounded-lg shadow-lg`}
+        className={`${
+          theme === "light" ? "bg-white text-gray-900" : "bg-[#2A3439] text-white"
+        } p-4 sm:p-6 rounded-lg shadow-lg`}
       >
         <button
           onClick={() => navigate("/")}
-          className={`flex items-center mb-4 ${theme === "light" ? "text-gray-600 hover:text-gray-800" : "text-gray-400 hover:text-gray-200"}`}
+          className={`flex items-center mb-2 sm:mb-4 ${
+            theme === "light" ? "text-gray-600 hover:text-gray-800" : "text-gray-400 hover:text-gray-200"
+          }`}
         >
           <svg
-            className="w-5 h-5 mr-2"
+            className="w-5 h-5 mr-1 sm:mr-2"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -97,12 +101,12 @@ function WorkshopDetails() {
         <motion.img
           src={`/assets/${workshop.image.split("/").pop()}`}
           alt={workshop.title}
-          className="w-full h-[500px] object-cover rounded-lg mb-4"
+          className="w-full h-48 sm:h-[400px] object-cover rounded-lg mb-2 sm:mb-4"
           initial={{ scale: 0.95 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.3 }}
         />
-        <h1 className="text-3xl font-semibold mb-2">{workshop.title}</h1>
+        <h1 className="text-2xl sm:text-3xl font-semibold mb-1 sm:mb-2">{workshop.title}</h1>
         <span
           className={`inline-block px-2 py-1 rounded text-sm ${
             theme === "light" ? "bg-teal-100 text-teal-800" : "bg-teal-800 text-white"
@@ -110,10 +114,13 @@ function WorkshopDetails() {
         >
           {workshop.category}
         </span>
-        <div className="flex flex-col md:flex-row items-center mt-4 mb-4 space-y-2 md:space-y-0 md:space-x-4">
+        {/* Adjusted Date and Location Section */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center mt-2 sm:mt-4 mb-2 sm:mb-4 space-y-2 sm:space-y-0 sm:space-x-6">
           <div className="flex items-center">
             <svg
-              className={`w-5 h-5 mr-2 ${theme === "light" ? "text-gray-600" : "text-gray-400"}`}
+              className={`w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2 ${
+                theme === "light" ? "text-gray-600" : "text-gray-400"
+              }`}
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -124,11 +131,13 @@ function WorkshopDetails() {
                 clipRule="evenodd"
               />
             </svg>
-            <p className={theme === "light" ? "text-gray-600 text-sm" : "text-gray-400 text-sm"}>{new Date(workshop.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</p>
+            <span className={theme === "light" ? "text-gray-600 text-sm" : "text-gray-400 text-sm"}>Date: {new Date(workshop.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
           </div>
           <div className="flex items-center">
             <svg
-              className={`w-5 h-5 mr-2 ${theme === "light" ? "text-gray-600" : "text-gray-400"}`}
+              className={`w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2 ${
+                theme === "light" ? "text-gray-600" : "text-gray-400"
+              }`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -147,22 +156,24 @@ function WorkshopDetails() {
                 d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
               />
             </svg>
-            <p className={theme === "light" ? "text-gray-600 text-sm" : "text-gray-400 text-sm"}>{workshop.location}</p>
+            <span className={theme === "light" ? "text-gray-600 text-sm" : "text-gray-400 text-sm"}>Location: {workshop.location}</span>
           </div>
         </div>
         <p className={theme === "light" ? "text-gray-600 mt-2" : "text-gray-400 mt-2"}>{workshop.description}</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+        <div className="flex flex-col sm:grid sm:grid-cols-2 gap-4 mt-4">
           <div>
             <h3 className={theme === "light" ? "text-lg font-semibold text-gray-900" : "text-lg font-semibold text-white"}>Organizers</h3>
-            <div className="mt-2">
+            <div className="mt-2 space-y-1">
               {workshop.organizers?.map((organizer, index) => (
-                <motion.div 
-                  key={index} 
-                  className="flex items-center mt-1"
+                <motion.div
+                  key={index}
+                  className="flex items-center"
                   whileHover={{ scale: 1.02 }}
                 >
                   <svg
-                    className={`w-5 h-5 mr-2 ${theme === "light" ? "text-gray-600" : "text-gray-400"}`}
+                    className={`w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2 ${
+                      theme === "light" ? "text-gray-600" : "text-gray-400"
+                    }`}
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
@@ -185,7 +196,9 @@ function WorkshopDetails() {
                 <motion.span
                   key={tag}
                   whileHover={{ scale: 1.05 }}
-                  className={`tag ${theme === "light" ? "light" : ""} inline-block px-2 py-1 rounded-full text-sm`}
+                  className={`inline-block px-2 py-1 rounded-full text-sm ${
+                    theme === "light" ? "bg-teal-100 text-teal-800" : "bg-teal-800 text-white"
+                  }`}
                 >
                   {tag}
                 </motion.span>
@@ -194,10 +207,12 @@ function WorkshopDetails() {
           </div>
         </div>
         {isRegistered ? (
-          <div className="mt-4">
+          <div className="mt-4 flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
             <motion.button
               onClick={handleRegister}
-              className={`btn ${theme === "light" ? "light bg-red-600 hover:bg-red-700" : "bg-red-700 hover:bg-red-800"} mr-2`}
+              className={`w-full sm:w-auto btn ${
+                theme === "light" ? "bg-red-600 hover:bg-red-700" : "bg-red-700 hover:bg-red-800"
+              }`}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -205,7 +220,9 @@ function WorkshopDetails() {
             </motion.button>
             <motion.button
               onClick={handleLeaveFeedback}
-              className={`btn ${theme === "light" ? "light bg-blue-600 hover:bg-blue-700" : "bg-blue-700 hover:bg-blue-800"}`}
+              className={`w-full sm:w-auto btn ${
+                theme === "light" ? "bg-blue-600 hover:bg-blue-700" : "bg-blue-700 hover:bg-blue-800"
+              }`}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -215,7 +232,9 @@ function WorkshopDetails() {
         ) : (
           <motion.button
             onClick={handleRegister}
-            className={`btn ${theme === "light" ? "light bg-green-600 hover:bg-green-700" : "bg-green-700 hover:bg-green-800"} mt-4`}
+            className={`w-full btn ${
+              theme === "light" ? "bg-green-600 hover:bg-green-700" : "bg-green-700 hover:bg-green-800"
+            } mt-4`}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -223,19 +242,29 @@ function WorkshopDetails() {
           </motion.button>
         )}
         {showFeedbackForm && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className={`mt-4 p-4 rounded-lg ${theme === "light" ? "bg-gray-100 text-gray-900" : "bg-gray-800 text-white"}`}
+            className={`mt-4 p-4 rounded-lg ${
+              theme === "light" ? "bg-gray-100 text-gray-900" : "bg-gray-800 text-white"
+            }`}
           >
             <div className="mb-2">
               <label className={theme === "light" ? "text-gray-700" : "text-gray-300"}>Rating: </label>
-              <div className="flex">
+              <div className="flex space-x-1 sm:space-x-2">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <motion.svg
                     key={star}
                     onClick={() => setRating(star)}
-                    className={`w-6 h-6 cursor-pointer ${rating >= star ? (theme === "light" ? "text-yellow-400" : "text-yellow-500") : (theme === "light" ? "text-gray-300" : "text-gray-600")}`}
+                    className={`w-5 h-5 sm:w-6 sm:h-6 cursor-pointer ${
+                      rating >= star
+                        ? theme === "light"
+                          ? "text-yellow-400"
+                          : "text-yellow-500"
+                        : theme === "light"
+                        ? "text-gray-300"
+                        : "text-gray-600"
+                    }`}
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
@@ -250,12 +279,16 @@ function WorkshopDetails() {
               value={feedbackText}
               onChange={(e) => setFeedbackText(e.target.value)}
               placeholder="Write your feedback..."
-              className={`w-full p-2 mb-2 rounded-lg ${theme === "light" ? "bg-white text-gray-900 border-gray-300" : "bg-[#3A4449] text-white border-gray-700"}`}
+              className={`w-full p-2 mb-2 rounded-lg ${
+                theme === "light" ? "bg-white text-gray-900 border-gray-300" : "bg-[#3A4449] text-white border-gray-700"
+              }`}
             />
-            <div className="flex">
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
               <motion.button
                 onClick={handleSubmitFeedback}
-                className={`btn ${theme === "light" ? "light bg-purple-600 hover:bg-purple-700" : "bg-purple-700 hover:bg-purple-800"}`}
+                className={`w-full sm:w-auto btn ${
+                  theme === "light" ? "bg-purple-600 hover:bg-purple-700" : "bg-purple-700 hover:bg-purple-800"
+                }`}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
                 disabled={!feedbackText || rating === 0}
@@ -264,7 +297,9 @@ function WorkshopDetails() {
               </motion.button>
               <motion.button
                 onClick={handleCancelFeedback}
-                className={`btn ${theme === "light" ? "light bg-gray-600 hover:bg-gray-700" : "bg-gray-700 hover:bg-gray-600"} ml-2`}
+                className={`w-full sm:w-auto btn ${
+                  theme === "light" ? "bg-gray-600 hover:bg-gray-700" : "bg-gray-700 hover:bg-gray-600"
+                } mt-2 sm:mt-0 sm:ml-2`}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -279,15 +314,19 @@ function WorkshopDetails() {
             {workshopFeedback.map((feedback) => (
               <motion.div
                 key={feedback.id}
-                className={`p-3 mt-2 rounded-lg ${theme === "light" ? "bg-gray-100 text-gray-800" : "bg-gray-700 text-gray-200"}`}
+                className={`p-2 sm:p-3 mt-2 rounded-lg ${
+                  theme === "light" ? "bg-gray-100 text-gray-800" : "bg-gray-700 text-gray-200"
+                }`}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2 }}
               >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between">
+                  <div className="flex items-center mb-1 sm:mb-0">
                     <svg
-                      className={`w-5 h-5 mr-2 ${theme === "light" ? "text-gray-600" : "text-gray-400"}`}
+                      className={`w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2 ${
+                        theme === "light" ? "text-gray-600" : "text-gray-400"
+                      }`}
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -299,13 +338,21 @@ function WorkshopDetails() {
                       />
                     </svg>
                     <span className={theme === "light" ? "text-gray-800 font-semibold" : "text-gray-200 font-semibold"}>{feedback.user}</span>
-                    <div className="ml-2 flex">
+                    <div className="ml-1 sm:ml-2 flex">
                       {Array(5)
                         .fill()
                         .map((_, i) => (
                           <svg
                             key={i}
-                            className={`w-5 h-5 ${i < feedback.rating ? (theme === "light" ? "text-yellow-400" : "text-yellow-500") : (theme === "light" ? "text-gray-300" : "text-gray-600")}`}
+                            className={`w-4 h-4 sm:w-5 sm:h-5 ${
+                              i < feedback.rating
+                                ? theme === "light"
+                                  ? "text-yellow-400"
+                                  : "text-yellow-500"
+                                : theme === "light"
+                                ? "text-gray-300"
+                                : "text-gray-600"
+                            }`}
                             fill="currentColor"
                             viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg"
@@ -318,12 +365,14 @@ function WorkshopDetails() {
                   {feedback.user === "CurrentUser" && (
                     <motion.button
                       onClick={() => handleDeleteFeedback(feedback.id)}
-                      className={`p-1 rounded-full ${theme === "light" ? "text-red-600 hover:bg-red-100" : "text-red-400 hover:bg-red-800"}`}
+                      className={`p-1 sm:p-2 rounded-full ${
+                        theme === "light" ? "text-red-600 hover:bg-red-100" : "text-red-400 hover:bg-red-800"
+                      }`}
                       whileHover={{ scale: 1.2 }}
                       whileTap={{ scale: 0.9 }}
                     >
                       <svg
-                        className="w-5 h-5"
+                        className="w-4 h-4 sm:w-5 sm:h-5"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -337,7 +386,7 @@ function WorkshopDetails() {
                     </motion.button>
                   )}
                 </div>
-                <p className={theme === "light" ? "text-gray-700 mt-2" : "text-gray-300 mt-2"}>{feedback.text}</p>
+                <p className={theme === "light" ? "text-gray-700 mt-1 sm:mt-2" : "text-gray-300 mt-1 sm:mt-2"}>{feedback.text}</p>
               </motion.div>
             ))}
           </div>

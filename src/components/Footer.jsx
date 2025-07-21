@@ -14,10 +14,10 @@ function Footer() {
       transition={{ duration: 0.5 }}
       className={`${
         theme === "light" ? "bg-gray-100" : "bg-[#2A3439]"
-      } text-gray-400 p-6`}
+      } text-gray-400 p-4 sm:p-6`}
     >
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="text-left mb-4 md:mb-0">
+      <div className="container mx-auto flex flex-col items-center space-y-6 sm:space-y-0 sm:flex-row sm:justify-between">
+        <div className="text-center sm:text-left">
           <h4
             className={`font-semibold ${
               theme === "light" ? "text-gray-900" : "text-white"
@@ -29,7 +29,7 @@ function Footer() {
                 e.preventDefault();
                 navigate("/");
               }}
-              className={`text-2xl hover: ${
+              className={`text-xl sm:text-2xl hover:${
                 theme === "light" ? "hover:text-gray-900" : "hover:text-gray-200"
               }`}
             >
@@ -39,14 +39,14 @@ function Footer() {
           <p
             className={`text-sm ${
               theme === "light" ? "text-gray-600" : "text-gray-400"
-            }`}
+            } mt-2`}
           >
             Find your next skill
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-right">
-          <div>
+        <div className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-8">
+          <div className="text-center sm:text-right">
             <h4
               className={`font-semibold ${
                 theme === "light" ? "text-gray-900" : "text-white"
@@ -54,7 +54,7 @@ function Footer() {
             >
               Explore
             </h4>
-            <ul className="space-y-1">
+            <ul className="space-y-2">
               <li>
                 <a
                   href="#"
@@ -67,7 +67,7 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="dashboard"
+                  href="/dashboard"
                   className={`hover:${
                     theme === "light" ? "text-gray-900" : "text-gray-200"
                   }`}
@@ -75,11 +75,10 @@ function Footer() {
                   Dashboard
                 </a>
               </li>
-
             </ul>
           </div>
 
-          <div>
+          <div className="text-center sm:text-right">
             <h4
               className={`font-semibold ${
                 theme === "light" ? "text-gray-900" : "text-white"
@@ -87,7 +86,7 @@ function Footer() {
             >
               Legal
             </h4>
-            <ul className="space-y-1">
+            <ul className="space-y-2">
               <li>
                 <a
                   href="#"
@@ -124,7 +123,7 @@ function Footer() {
       </div>
 
       {/* Line just above the copyright */}
-      <hr className="border-t border-gray-700 my-6 w-full" />
+      <hr className="border-t border-gray-700 my-4 sm:my-6 w-full" />
 
       {/* Centered copyright */}
       <p
